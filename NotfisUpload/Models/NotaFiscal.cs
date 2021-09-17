@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace NotfisUpload.Models
+﻿namespace NotfisUpload.Models
 {
     public class NotaFiscal
     {
@@ -12,5 +7,6 @@ namespace NotfisUpload.Models
         public string RazaoSocial { get; set; }
         public string Data { get; set; }
         public string Endereco { get; set; }
+
     }
 }
