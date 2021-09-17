@@ -7,6 +7,7 @@
         public string RazaoSocial { get; set; }
         public string Data { get; set; }
         public string Endereco { get; set; }
+        public string Cep  { get; set; }
 
     }
 }
