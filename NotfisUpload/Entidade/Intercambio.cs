@@ -8,10 +8,14 @@ namespace NotfisUpload.Entidade
     public class Intercambio
     {
         public long Id { get; set; }
+        public string Remetente { get; set; }
         public string Destinatario { get; set; }
         public string Data { get; set; }
         public string Hora { get; set; }
+        public string IndetificadorIntercambio { get; set; }
+
         public string Documento { get; set; }
+
         public string CNPJ { get; set; }
         public string IE { get; set; }
         public string Endereco { get; set; }

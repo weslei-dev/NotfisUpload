@@ -8,7 +8,6 @@ namespace NotfisUpload.Entidade
     public class NotaFiscal
     {
         public string Id { get; set; }
-
         public string Romaneio { get; set; }
         public string CodigoRota { get; set; }
         public string MeioDeTransporte { get; set; }

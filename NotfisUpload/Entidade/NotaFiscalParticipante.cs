@@ -19,18 +19,17 @@ namespace NotfisUpload.Entidade
         public string AreaFrete { get; set; }
 
 
-
         public string FreteRazaoSocial { get; set; }
         public string FreteCNPJ { get; set; }
-        public string FreteInscricaoEstadual { get; set; }
+        public string FreteIE{ get; set; }
         public string FreteLogradouro { get; set; }
         public string FreteBairro { get; set; }
         public string FreteCidade { get; set; }
+        public string FreteIBGE { get; set; }
         public string FreteCep { get; set; }
-        public string FreteCodigoPostal { get; set; }
         public string FreteEstado { get; set; }
-        public string FretecodigoMunicipio { get; set; }
         public string FreteTelefone { get; set; }
+
 
         public string OperacaoNotaFiscal { get; set; }
         public string PeriodoDeEntrega { get; set; }
