@@ -7,14 +7,15 @@ namespace NotfisUpload.Entidade
 {
     public class NotaFiscalParticipante
     {
+        public int ID { get; set; }
         public string RazaoSocial { get; set; }
-        public string CNPJs { get; set; }
+        public string CNPJ { get; set; }
         public string InscricaoEstadual { get; set; }
         public string Logradouro { get; set; }
         public string Bairro { get; set; }
-        public string Cidades { get; set; }
-        public string Ceps { get; set; }
-        public string CodigoPostal { get; set; }
+        public string Cidade { get; set; }
+        public string Cep { get; set; }
+        public string IBGE { get; set; }
         public string Estados { get; set; }
         public string AreaFrete { get; set; }
 
