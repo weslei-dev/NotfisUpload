@@ -9,7 +9,7 @@ namespace NotfisUpload.Models
     {
         public Conteudo(string tema)
         {
-            tema = tema;
+            Tema = tema;
         }
         public string Tema { get; set; }
     }

@@ -6,3 +6,558 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+
+<div class="destak-body" style="max-height: 552px;">
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- Filtros -->
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <form action="/Notas/Filtro" method="get">
+                        <div class="row">
+                            <div class="col-md-3 col-xs-12">
+                                <div class="espacamentoMobile">
+                                    <label class="sr-only">Empresas</label>
+                                    <select id="cmbEmpresa" class="form-control input-sm select2-container select2-hidden-accessible" name="cmbEmpresa" tabindex="-1" aria-hidden="true">
+                                        <option value="">Todas</option>
+                                        <option value="736"> MARTIPLAST INDUSTRIA E COM DE PLASTICOS LTDA</option>
+                                        <option value="358">[AJA01] TOY MANIA</option>
+                                        <option value="289">[ANA01] HERBALIFE</option>
+                                        <option value="556">[BEL] NATURA COSMETICOS</option>
+                                        <option value="352">[BELST] AZUL TEC</option>
+                                        <option value="255">[BHZ04] LUIZA BARCELOS</option>
+                                        <option value="113">[BSB01] SUPER ADEGA</option>
+                                        <option value="354">[BSBST] AZUL TEC</option>
+                                        <option value="354">[BSBST] AZUL TEC</option>
+                                        <option value="178">[CAC] ARKTUS</option>
+                                        <option value="97">[CCI] BALLKE</option>
+                                        <option value="389">[CDIFA] AZUL TEC</option>
+                                        <option value="355">[CGBST] AZUL TEC</option>
+                                        <option value="311">[CGH] AEROSOFT</option>
+                                        <option value="96">[CGH] ALOHA</option>
+                                        <option value="164">[CGH] CARREFOUR</option>
+                                        <option value="306">[CGH] DOTERRA</option>
+                                        <option value="479">[CGH] MAQUETE AZUL [UPLOAD PLANILHA]</option>
+                                        <option value="264">[CGH] PRINTI</option>
+                                        <option value="2">[CGH] SARAIVA</option>
+                                        <option value="422">[CGHST} AZUL TEC</option>
+                                        <option value="71">[CGR01] EMPODERA</option>
+                                        <option value="1218">[CNF] BRINGER DO BRASIL [AZUL FACIL]</option>
+                                        <option value="25">[CNF] HERBALIFE</option>
+                                        <option value="353">[CNFST] AZUL TEC</option>
+                                        <option value="353">[CNFST] AZUL TEC</option>
+                                        <option value="104">[CPQ01] RODOBENS</option>
+                                        <option value="259">[CSU02] CASA &amp; DIVERSAO</option>
+                                        <option value="123">[CWB] ANGELONI</option>
+                                        <option value="55">[CWB] FIREXPRESS</option>
+                                        <option value="615">[CWB] PARANA EQUIPAMENTOS</option>
+                                        <option value="11">[CWB] POSITIVO</option>
+                                        <option value="466">[CWB] VOLVO</option>
+                                        <option value="59">[CWB03] CLUBE DO MALTE [AZUL FACIL]</option>
+                                        <option value="685">[CWB05] ELECTROLUX </option>
+                                        <option value="315">[CWB05] FERRAMENTAS KENNEDY</option>
+                                        <option value="374">[CWBST] AZUL TEC</option>
+                                        <option value="191">[CXJ] BRINOX [AZUL FACIL]</option>
+                                        <option value="463">[CXJ] VINUM BEBIDAS [AZUL FACIL]</option>
+                                        <option value="737">[FCAP1] FIAT CHRYSLER AUTOMOVEIS BRASIL LTDA.</option>
+                                        <option value="43">[FLN] BIASOTTO &amp; CIA</option>
+                                        <option value="613">[FLN] FILIPEFLOP COMPONENTES ELETRONICOS </option>
+                                        <option value="31">[FLN] IMAGINARIUM</option>
+                                        <option value="75">[FLN] INTELBRAS</option>
+                                        <option value="9">[FLN] QUANTITY</option>
+                                        <option value="712">[FLN01] FLORAVITA </option>
+                                        <option value="176">[FLN01] IDEIA GURU</option>
+                                        <option value="185">[FLN01] UNIAO SUP MILITARES</option>
+                                        <option value="324">[FLN03] CALL CENTER CALCADOS</option>
+                                        <option value="469">[FLN03] LABELLAMAFIA CONFECCOES [AZUL FACIL]</option>
+                                        <option value="700">[FLN03] STUDIO Z</option>
+                                        <option value="172">[FOR] PAGUE MENOS</option>
+                                        <option value="637">[FOR] YANN AGUA DE COCO</option>
+                                        <option value="34">[GEL] CELESTINA MARGARETE</option>
+                                        <option value="368">[GRU] LOGGI [UPLOAD XML COMP]</option>
+                                        <option value="661">[GRU] O BOTICARIO</option>
+                                        <option value="100">[GRU03] R10 SPORT</option>
+                                        <option value="16">[HEBP1] HERBALIFE</option>
+                                        <option value="76">[IDT01] LIFE NATURAL [COTACAO]</option>
+                                        <option value="103">[ITJ01] ANGELONI</option>
+                                        <option value="197">[JBT01] HERBALIFE</option>
+                                        <option value="149">[JOI] DIGIPIX</option>
+                                        <option value="65">[JPA01] TGE BEM ESTAR</option>
+                                        <option value="95">[KBUM1] KABUM!</option>
+                                        <option value="46">[LDB] ARKITECT</option>
+                                        <option value="733">[LDB] DSJ  LONDRINA ARMARINHOS LTDA</option>
+                                        <option value="947">[LDB] GOLSAT TECNOLOGIA LTDA</option>
+                                        <option value="28">[LDB] KEY DESIGN</option>
+                                        <option value="83">[LDB] RELVA VERDE</option>
+                                        <option value="134">[LFR01] HERBALIFE</option>
+                                        <option value="195">[LFRP1] EDITORA SANAR</option>
+                                        <option value="12">[MAO] POSITIVO</option>
+                                        <option value="4">[MAO] SAMSUNG</option>
+                                        <option value="64">[MAO01] ELSYS</option>
+                                        <option value="309">[MAO01] ESSILOR GKO</option>
+                                        <option value="136">[MAO01] SECULUS</option>
+                                        <option value="431">[MAO01] TECHNOS DA AMAZONIA</option>
+                                        <option value="465">[MCZ] CARAJAS</option>
+                                        <option value="547">[MEL10] MERCADO LIVRE RIO DE JANEIRO XRJ1 </option>
+                                        <option value="548">[MEL11] MERCADO LIVRE CONTAGEM XMG1</option>
+                                        <option value="551">[MEL12] MERCADO LIVRE LAURO DE FREITAS BRBA01</option>
+                                        <option value="606">[MEL13] MERCADO LIVRE GUARULHOS BRXSP6</option>
+                                        <option value="658">[MEL14] PA MERCADO LIVRE BRXSC2</option>
+                                        <option value="657">[MEL15] NOVO PA MERCADO LIVRE XD PORTO ALEGRE SRS1</option>
+                                        <option value="662">[MEL16] MERCADO LIVRE XD ESPÍRITO SANTO BRXES1</option>
+                                        <option value="663">[MEL17] MERCADO LIVRE XD GOIANIA</option>
+                                        <option value="673">[MEL18] MERCADO LIVRE XD RECIFE</option>
+                                        <option value="683">[MEL19] PA MERCADO LIVRE BRXSP7</option>
+                                        <option value="682">[MEL20] PA MERCADO LIVRE BRXBA1</option>
+                                        <option value="940">[MEL21]  MERCADO LIVRE JORDANESIA CAJAMAR BRSP04 </option>
+                                        <option value="944">[MEL22] MERCADO LIVRE SC GOVERNADOR CELSO BRSC01</option>
+                                        <option value="192">[MELP1] MERCADO LIVRE ARENA BARUERI</option>
+                                        <option value="292">[MELP2] MERCADO LIVRE VILA GUILHERME</option>
+                                        <option value="293">[MELP3] MERCADO LIVRE LOUVEIRA BRSP01</option>
+                                        <option value="314">[MELP4] MERCADO LIVRE CAMPINAS</option>
+                                        <option value="345">[MELP5] MERCADO LIVRE CAJAMAR BRSP02</option>
+                                        <option value="443">[MELP6] MERCADO LIVRE CAJAMAR BRSP03</option>
+                                        <option value="461">[MELP7] MERCADO LIVRE SAO BERNARDO DO CAMPO XSP4</option>
+                                        <option value="494">[MELP8] MERCADO LIVRE RIBEIRAO PRETO BRXSP5</option>
+                                        <option value="545">[MELP9] MERCADO LIVRE CURITIBA XPR1 </option>
+                                        <option value="650">[MLH01] MERCADO LIVRE ARENA BARUERI</option>
+                                        <option value="709">[MLH02] MERCADO LIVRE VILA GUILHERME</option>
+                                        <option value="651">[MLH03] MERCADO LIVRE LOUVEIRA BRSP01</option>
+                                        <option value="359">[MLH04] MERCADO LIVRE LINE HAUL CAMPINAS</option>
+                                        <option value="652">[MLH05] MERCADO LIVRE CAJAMAR BRSP02</option>
+                                        <option value="742">[MLH06] MERCADO LIVRE CAJAMAR II</option>
+                                        <option value="649">[MLH07] MERCADO LIVRE SBC XSP4</option>
+                                        <option value="710">[MLH12] MERCADO LIVRE LAURO DE FREITAS BRBA01</option>
+                                        <option value="740">[MLH13] MERCADO LIVRE GUARULHOS BRXSP6</option>
+                                        <option value="739">[MLH15]PA MERCADO LIVRE LH PORTO ALEGRE SRS1</option>
+                                        <option value="741">[MLH16] MERCADO LIVRE XD ESPÍRITO SANTO BRXES1</option>
+                                        <option value="698">[NIT01] ELETROFRIGOR [AZUL FACIL]</option>
+                                        <option value="237">[NVT] BLUKIT [AZUL FACIL] B INFATIL</option>
+                                        <option value="367">[NVT] CATARINAELETRO.COM [AZUL FACIL]</option>
+                                        <option value="61">[NVT] DBR</option>
+                                        <option value="62">[NVT] HERING</option>
+                                        <option value="22">[NVT] JCS</option>
+                                        <option value="216">[NVT] M MODA [AZUL FACIL]</option>
+                                        <option value="587">[NVT] RELIZA [AZUL FACIL]</option>
+                                        <option value="404">[NVT] SIMPRESS</option>
+                                        <option value="105">[NVT] VIDA &amp; COR</option>
+                                        <option value="708">[PGZ] MERCADO MOVEIS </option>
+                                        <option value="53">[PMW] KENERSON</option>
+                                        <option value="318">[POA01] OPHTALMED </option>
+                                        <option value="412">[POA01] ORTHOMUNDI</option>
+                                        <option value="29">[POA01] PAQUETA</option>
+                                        <option value="614">[POA03] BEBIDAS DO SUL </option>
+                                        <option value="47">[POO01] CONTEM 1G</option>
+                                        <option value="23">[PPB] FF.COM</option>
+                                        <option value="288">[PVH] HERBALIFE</option>
+                                        <option value="27">[QET02] DENTAL CREMER</option>
+                                        <option value="333">[QET02] GRAO DE GENTE - LGF</option>
+                                        <option value="209">[QHB01] SOTREQ PIRACICABA</option>
+                                        <option value="322">[QHV01] CALCADOS BIBI</option>
+                                        <option value="553">[QHV01] DECOHOUSE [AZUL FACIL]</option>
+                                        <option value="233">[QHV01] EMME</option>
+                                        <option value="77">[QHV01] NORDWEG</option>
+                                        <option value="386">[QHV01] VINCI SHOES</option>
+                                        <option value="235">[QKA02] DREBES &amp; CIA </option>
+                                        <option value="287">[QKA02] HERBALIFE</option>
+                                        <option value="72">[QKA02] PERTO [FINAL 000872]</option>
+                                        <option value="320">[QOC03] TAG LIVROS </option>
+                                        <option value="357">[QOI03] SONDA PROCWORK INFO</option>
+                                        <option value="611">[QRJ] MEGAMAMUTE [AZUL FACIL]</option>
+                                        <option value="622">[QRJ01] ANACAPRI - AREZZO</option>
+                                        <option value="433">[QRJ01] AREZZO</option>
+                                        <option value="626">[QRJ01] BIRMAN - AREZZO</option>
+                                        <option value="617">[QRJ01] BRINOX [AZUL FACIL]</option>
+                                        <option value="621">[QRJ01] FIEVER - AREZZO</option>
+                                        <option value="619">[QRJ01] OUTSTORE - AREZZO</option>
+                                        <option value="623">[QRJ01] SCHUTZ - AREZZO</option>
+                                        <option value="620">[QRJ01] VANS - AREZZO</option>
+                                        <option value="493">[REC] B R SAMOR LOGISTICA</option>
+                                        <option value="408">[REC] DIRECT EXPRESS</option>
+                                        <option value="865">[REC] DOTERRA COSMETICOS DO BRASIL LTDA</option>
+                                        <option value="120">[REC01] NEWPOST</option>
+                                        <option value="300">[SAMP1] SAMSUNG SVC</option>
+                                        <option value="302">[SAO02] THE BEER PLANET</option>
+                                        <option value="49">[SDU] HAYTEK</option>
+                                        <option value="262">[SER01] ARAMIS</option>
+                                        <option value="454">[SJM01] FOREVER LIVING</option>
+                                        <option value="274">[SOD02] DENTAL MORELLI</option>
+                                        <option value="705">[SSA] O BOTICARIO</option>
+                                        <option value="26">[SSA] SARAIVA</option>
+                                        <option value="646">[SUM02]  HONDA AUTOMOVEIS DO BRASIL LTDA</option>
+                                        <option value="808">[SUM02]  HONDA AUTOMOVEIS DO BRASIL LTDA (2 RODAS)</option>
+                                        <option value="40">[TODAS] CENTRAL DO FRETE</option>
+                                        <option value="18">[TODAS] CLIENTE COMUM</option>
+                                        <option value="271">[TODAS] MELHOR ENVIO</option>
+                                        <option value="267">[VCP] AEROSOFT</option>
+                                        <option value="328">[VCP] BRINGER</option>
+                                        <option value="13">[VCP] CNOVA</option>
+                                        <option value="19">[VCP] DANONE</option>
+                                        <option value="248">[VCP] DIRECT EXPRESS [AZUL FACIL]</option>
+                                        <option value="142">[VCP] FAST SHOP CAJ2</option>
+                                        <option value="163">[VCP] FAST SHOP CD CAJ 3</option>
+                                        <option value="439">[VCP] GKO LUXOTTICA</option>
+                                        <option value="486">[VCP] JADLOG [UPLOAD PLANILHA]</option>
+                                        <option value="115">[VCP] MAGAZINE LUIZA</option>
+                                        <option value="106">[VCP] SAMSUNG</option>
+                                        <option value="10">[VCPST] AZUL TEC</option>
+                                        <option value="727">[VIX] AREZZO INDUSTRIA E COMERCIO</option>
+                                        <option value="37">[VIX] CREATIVE COPIAS</option>
+                                        <option value="627">[VIX] OWME - AREZZO</option>
+                                        <option value="3">[WINE1] WINE</option>
+                                        <option value="840">E-VINO COMERCIO DE VINHOS S.A [VIX]</option>
+                                        <option value="907">GIRAFA COMERCIO ELETRONICO LTDA</option>
+                                        <option value="616">GRENDENE SA</option>
+                                        <option value="1025">KEIMEN ARTEFATOS LTDA - EPP</option>
+                                        <option value="862">LOJAS LE BISCUIT S/A</option>
+                                        <option value="1120">M&amp;D TRANSLOG SOLUCOES EM TRANSPORTE LTDA  ME</option>
+                                        <option value="1101">PALTERM INDUSTRIA E COMERCIO LTDA</option>
+                                        <option value="188">UNICARGO TRANSPORTES E CARGAS LTDA</option>
+                                        <option value="925">VVLOG LOGISTICA LTDA.</option>
+                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 318.5px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-cmbEmpresa-container"><span class="select2-selection__rendered" id="select2-cmbEmpresa-container" title="Todas">Todas</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-xs-12">
+                                <div class="espacamentoMobile">
+                                    <label class="sr-only">Data de</label>
+                                    <input type="text" name="InclusaoDe" class="form-control input-sm datepicker-me" placeholder="Data inicial" value="21/09/2021">
+                                </div>
+                            </div>
+                            <div class="col-sm-2 col-xs-12">
+                                <div class="espacamentoMobile">
+                                    <label class="sr-only">Data até</label>
+                                    <input type="text" name="InclusaoAte" class="form-control input-sm datepicker-me" placeholder="DataFinal" value="21/09/2021">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-xs-12 multiplos">
+                                <div class="espacamentoMobile">
+                                    <select multiple="" id="Numero" name="Numero" class="form-control selectNota select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Número Nota" style="width: 190.725px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-xs-12 multiplos">
+                                <div class="espacamentoMobile">
+                                    <select multiple="" id="NumeroMinuta" name="NumeroMinuta" class="form-control selectMinuta select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Número Minuta" style="width: 306.9px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-1 col-xs-12">
+                                <label class="sr-only">Status</label>
+                                <select class="form-control input-sm" id="cmbStatus" name="cmbStatus">
+                                    <option value="">Todos</option>
+                                    <option value="1000">Sucesso</option>
+                                    <option value="9999">Erro</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-xs-12 multiplos">
+                                <div class="espacamentoMobile">
+                                    <select multiple="" id="ChaveNFE" name="ChaveNFE" class="form-control selectChave select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Chave Nota Fiscal" style="width: 423.062px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-xs-12 multiplos">
+                                <div class="espacamentoMobile">
+                                    <select multiple="" id="Pedido" name="Pedido" class="form-control selectPedido select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Digite Pedido" style="width: 423.062px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2 col-xs-12">
+                                <div class="">
+                                    <label class="sr-only">Romaneio</label>
+                                    <input type="text" name="Romaneio" class="form-control input-sm" placeholder="Romaneio">
+                                </div>
+                            </div>
+                            <div class="col-sm-1 col-xs-12">
+                                <div class="espacamentoMobile">
+                                    <input type="submit" class="btn btn-info btn-sm btn-block" value="Filtrar">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="alert alert-warning">
+                Nenhum resultado encontrado. Para visualizar os dados é necessário informar uma
+                <strong>Data inicial</strong> e uma <strong>Data final</strong>.
+                <br>
+                A diferença máxima permitira entre as datas é de <strong>05 dias</strong>.
+            </div>
+            <!-- Modal - Novo De/Para -->
+            <form id="frmCargaPerigosa">
+                <div class="modal fade" id="modalCargaPerigosa">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Fechar</span></button>
+                                <h3 class="modal-title">Cadastro Produto (Carga Perigosa)</h3>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Dados Carga Perigosa</h4>
+                                <hr>
+                                <div class="row">
+                                    <input data-val="true" data-val-number="The field ID_Empresa must be a number." data-val-required="The ID_Empresa field is required." id="ID_Empresa" name="EmpresaCargaPerigosa.ID_Empresa" type="hidden" value="">;
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                            <label for="recipient-name" class="col-form-label">ID Aeronave</label>
+                                            <input class="form-control input-sm text-box single-line" id="Aeronave" name="EmpresaCargaPerigosa.ID_Aeronave" type="text" value="">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <label for="recipient-name" class="col-form-label">ID Carga Perigosa</label>
+                                            <input class="form-control input-sm text-box single-line" id="Id_Carga" name="EmpresaCargaPerigosa.ID_CargaPerigosa" type="text" value="">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                            <label for="recipient-name" class="col-form-label">Cód. Produto Carga Perigosa</label>
+                                            <input class="form-control input-sm text-box single-line" id="CodProd" name="EmpresaCargaPerigosa.CodigoProdutoCargaPerigosa" type="text" value="">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <label for="recipient-name" class="col-form-label">Manuseio Especial</label>
+                                            <input class="form-control input-sm text-box single-line" id="Manuseio" name="EmpresaCargaPerigosa.ManuseioEspecial" type="text" value="">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <label for="recipient-name" class="col-form-label">Observação Carga Perigosa</label>
+                                            <input class="form-control input-sm text-box single-line" id="Obs" name="EmpresaCargaPerigosa.Observacao" type="text" value="">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4>Dados Cliente</h4>
+                                <hr>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-xs-6">
+                                            <label for="recipient-name" class="col-form-label">Cód. Produto Cliente</label>
+                                            <input class="form-control input-sm text-box single-line" id="CodProdCli" name="EmpresaCargaPerigosa.CodigoProduto" type="text" value="">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <label for="recipient-name" class="col-form-label">Aceitação</label>
+                                            <select id="cmbTipoAceitacao" class="form-control input-sm" name="EmpresaCargaPerigosa.Aceitacao" required="true">
+                                                <option value="0">Selecione a Aceitação</option>
+                                                <option value="SIM">SIM</option>
+                                                <option value="DG">DG</option>
+                                                <option value="NÃO">NÃO</option>
+                                            </select>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <label for="recipient-name" class="col-form-label">Descrição Cliente</label>
+                                            <input class="form-control input-sm text-box single-line" id="Desc" name="EmpresaCargaPerigosa.Descricao" type="text" value="">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <input type="button" class="btn btn-primary" onclick="validarFormularioCargaPerigosa()" value="Salvar">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="modal fade" id="modalParticipante">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content col-md-12">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Fechar</span></button>
+                            <h5 class="modal-title">Visualizar Participantes</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-md-6">
+                                <h4><b>Dados do Emitente/Expedidor</b></h4>
+                                <hr>
+                                <div class="row">
+                                    <label class="col-xs-3 control-label participante-label">Nome:</label>
+                                    <div class="col-xs-9">
+                                        <input type="text" id="nomeEmitente" disabled="disabled" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label class="col-xs-3 control-label participante-label">CNPJ/CPF:</label>
+                                    <div class="col-xs-9">
+                                        <input type="text" id="cnpjEmitente" disabled="disabled" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label class="col-xs-3 control-label participante-label">Logradouro:</label>
+                                    <div class="col-xs-9">
+                                        <input type="text" id="logradouroEmitente" disabled="disabled" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label class="col-xs-3 control-label participante-label">Bairro:</label>
+                                    <div class="col-xs-9">
+                                        <input type="text" id="bairroEmitente" disabled="disabled" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label class="col-xs-3 control-label participante-label">Municipio:</label>
+                                    <div class="col-xs-9">
+                                        <input type="text" id="municipioEmitente" disabled="disabled" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label class="col-xs-3 control-label participante-label">Numero:</label>
+                                    <div class="col-xs-3">
+                                        <input type="text" id="numeroEmitente" disabled="disabled" class="form-control input-sm">
+                                    </div>
+                                    <label class="col-xs-2 control-label participante-label">UF:</label>
+                                    <div class="col-xs-4">
+                                        <input type="text" id="ufEmitente" disabled="disabled" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <label class="col-xs-3 control-label participante-label">CEP:</label>
+                                    <div class="col-xs-3">
+                                        <input type="text" id="cepEmitente" disabled="disabled" class="form-control input-sm">
+                                    </div>
+                                    <label class="col-xs-2 control-label participante-label">IBGE:</label>
+                                    <div class="col-xs-4">
+                                        <input type="text" id="ibgeEmitente" disabled="disabled" class="form-control input-sm">
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <h4><b>Dados do Destinatário/Recebedor</b></h4>
+                                <hr>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="col-xs-3 control-label participante-label">Nome:</label>
+                                        <div class="col-xs-9">
+                                            <input type="text" id="nomeDestinatario" disabled="disabled" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <label class="col-xs-3 control-label participante-label">CNPJ/CPF:</label>
+                                        <div class="col-xs-9">
+                                            <input type="text" id="cnpjDestinatario" disabled="disabled" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <label class="col-xs-3 control-label participante-label">Logradouro:</label>
+                                        <div class="col-xs-9">
+                                            <input type="text" id="logradouroDestinatario" disabled="disabled" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <label class="col-xs-3 control-label participante-label">Bairro:</label>
+                                        <div class="col-xs-9">
+                                            <input type="text" id="bairroDestinatario" disabled="disabled" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <label class="col-xs-3 control-label participante-label">Municipio:</label>
+                                        <div class="col-xs-9">
+                                            <input type="text" id="municipioDestinatario" disabled="disabled" class="form-control input-sm">
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    <div class="row">
+                                        <label class="col-xs-3 control-label participante-label">Numero:</label>
+                                        <div class="col-xs-3">
+                                            <input type="text" id="numeroDestinatario" disabled="disabled" class="form-control input-sm">
+                                        </div>
+                                        <label class="col-xs-2 control-label participante-label">UF:</label>
+                                        <div class="col-xs-4">
+                                            <input type="text" id="ufDestinatario" disabled="disabled" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <label class="col-xs-3 control-label participante-label">CEP:</label>
+                                        <div class="col-xs-3">
+                                            <input type="text" id="cepDestinatario" disabled="disabled" class="form-control input-sm">
+                                        </div>
+                                        <label class="col-xs-2 control-label participante-label">IBGE:</label>
+                                        <div class="col-xs-4">
+                                            <input type="text" id="ibgeDestinatario" disabled="disabled" class="form-control input-sm">
+                                        </div>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
