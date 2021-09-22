@@ -54,7 +54,6 @@ C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisU
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\NotfisUpload.TagHelpers.output.cache
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\NotfisUpload.RazorCoreGenerate.cache
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -77,3 +76,4 @@ C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisU
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\bin\Debug\net5.0\Humanizer.dll
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Home\Integracao.cshtml.g.cs

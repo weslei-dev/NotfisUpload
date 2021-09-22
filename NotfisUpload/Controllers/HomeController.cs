@@ -23,7 +23,7 @@ namespace NotfisUpload.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Integracao()
         {
             return View();
         }
