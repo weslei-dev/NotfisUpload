@@ -76,4 +76,9 @@ C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisU
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\bin\Debug\net5.0\Humanizer.dll
 C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Home\Integracao.cshtml.g.cs
+C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Home\Informacao.cshtml.g.cs
+C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Home\Monitoramento.cshtml.g.cs
+C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Login\CadastrarLogin.cshtml.g.cs
+C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Login\RecuperarLogin.cshtml.g.cs
+C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Login\RegistrarLogin.cshtml.g.cs
+C:\Users\wesle\OneDrive\Documentos\Online APP\Notfis_Upload\NotfisUpload\NotfisUpload\obj\Debug\net5.0\Razor\Views\Home\CadastrarLogin.cshtml.g.cs

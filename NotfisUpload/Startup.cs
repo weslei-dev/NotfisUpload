@@ -52,7 +52,7 @@ namespace NotfisUpload
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=SalvarUpload}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
