@@ -18,6 +18,8 @@ namespace NotfisUpload.Models
         }
         public DbSet<Arquivo> Arquivos { get; set; }
         public DbSet<Intercambio> Intercambios { get; set; }
+        public DbSet<Conta> conta { get; set; }
+
 
 
     }

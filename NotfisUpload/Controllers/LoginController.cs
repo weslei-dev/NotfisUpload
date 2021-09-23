@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NotfisUpload.Entidade;
 using NotfisUpload.Servicos;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,15 @@ namespace NotfisUpload.Controllers
 {
     public class LoginController : Controller
     {
-        public IActionResult RegistrarLogin()
+        public IActionResult Index()
         {
             return View();
+        }
+
+        public void RegistrarLogin()
+        {
+            var conta = new Conta();
+            conta.Login();
         }
 
         public IActionResult CadastrarLogin()
