@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using NotfisUpload.Models;
+using NotfisUpload.Servicos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,8 @@ namespace NotfisUpload
             var connection = Configuration.GetConnectionString("DataBaseConnection");
             services.AddDbContext<DataBaseContext>(options => options.UseSqlServer(connection));
             services.AddControllersWithViews();
+
+            services.AddScoped<CadastrarLogin, CadastrarLogin> (); 
 
             services.AddControllersWithViews();
         }

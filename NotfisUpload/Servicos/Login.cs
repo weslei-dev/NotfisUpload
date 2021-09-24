@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace NotfisUpload.Servicos
 {
-    public class CadastrarLogin
+    public class Login
+
     {
     }
 }

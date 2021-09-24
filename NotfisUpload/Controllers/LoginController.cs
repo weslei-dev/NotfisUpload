@@ -10,20 +10,38 @@ namespace NotfisUpload.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly CadastrarLogin _cadastrarLogin = null;
+
+        public LoginController(CadastrarLogin cadastrarlogin)
+        {
+            _cadastrarLogin = cadastrarlogin;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public void RegistrarLogin()
+        [HttpPost]
+        public ViewResult AddNewLogin(Usuario usuario)
         {
-            var conta = new Conta();
-            conta.Login();
+            _cadastrarLogin.AddNewLogin(usuario);
+
+                return View("~/Home/Index");
         }
+
 
         public IActionResult CadastrarLogin()
         {
+            //ViewBag.cep = business.cep.Busca("13020320")
             return View();
+        }
+
+
+        public IActionResult RegistrarLogin()
+        {
+            return View();
+
         }
 
         public IActionResult RecuperarLogin()

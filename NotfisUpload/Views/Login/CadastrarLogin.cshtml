@@ -1,53 +1,84 @@
-﻿<form action="/Veiculos/Salvar" method="post">
+﻿<script src="~/lib/jquery/dist/cep.js"></script>
+<scripts src="~/Scripts/jquery-1.10.2.js"></scripts>
+
+
+
+
+
+<form action="/Login/AddNewLogin" method="post">
 
     <h1 class="row col-md-offset">@ViewBag.Title</h1>
 
     <div class="row col-md-offset-3">
-        <label for="nome" class="col-sm-2 col-form-label text-right">Marca:</label>
+        <label for="nome" class="col-sm-2 col-form-label text-right">Nome:</label>
         <div class="col-sm-4">
-            <input type="text" id="nome" name="nome" />
+            <input type="text" id="Nome" name="Nome" />
         </div>
     </div>
     <div class="row col-md-offset-3">
-        <label for="modelo" class="col-sm-2 col-form-label text-right">Modelo:</label>
+        <label for="modelo" class="col-sm-2 col-form-label text-right">Email:</label>
         <div class="col-sm-4">
-            <input type="text" id="Modelo" name="Modelo" />
+            <input type="email" id="Email" name="Email" />
         </div>
     </div>
     <div class="row col-md-offset-3">
-        <label for="fabricacao" class="col-sm-2 col-form-label text-right">Ano:</label>
+        <label for="fabricacao" class="col-sm-2 col-form-label text-right">Senha:</label>
         <div class="col-sm-4">
-            <input type="text" id="fabricacao" name="fabricacao" />
+            <input type="password" id="Senha" name="Senha" />
         </div>
     </div>
     <div class="row col-md-offset-3">
-        <label for="cor" class="col-sm-2 col-form-label text-right">Cor:</label>
+        <label for="fabricacao" class="col-sm-2 col-form-label text-right">Telefone:</label>
         <div class="col-sm-4">
-            <input type="text" id="cor" name="cor" />
+            <input type="text" id="Telefone" name="Telefone" />
         </div>
     </div>
     <div class="row col-md-offset-3">
-        <label for="combustivel" class="col-sm-2 col-form-label text-right">Combustivel:</label>
+        <label for="cor" class="col-sm-2 col-form-label text-right">Cep:</label>
         <div class="col-sm-4">
-            <input type="text" id="combustivel" name="combustivel" />
+            <input type="text" id="Cep" name="Cep" value="" />
         </div>
     </div>
     <div class="row col-md-offset-3">
-        <label for="autoatico" class="col-sm-2 col-form-label text-right">Autmatico:</label>
+        <label for="combustivel" class="col-sm-2 col-form-label text-right">Numero:</label>
         <div class="col-sm-4">
-            <input type="text" id="automatico" name="automatico" />
+            <input type="text" id="Numero" name="Numero" />
         </div>
     </div>
     <div class="row col-md-offset-3">
-        <label for="valor" class="col-sm-2 col-form-label text-right">Valor:</label>
+        <label for="autoatico" class="col-sm-2 col-form-label text-right">Complemento:</label>
         <div class="col-sm-4">
-            <input type="text" id="valor" name="valor" />
+            <input type="text" id="Complemento" name="Complemento" />
+        </div>
+    </div>
+    <div class="row col-md-offset-3">
+        <label for="valor" class="col-sm-2 col-form-label text-right">Endereço:</label>
+        <div class="col-sm-4">
+            <input type="text" id="Endereco" name="endereco" value="" />
+        </div>
+    </div>
+    <div class="row col-md-offset-3">
+        <label for="valor" class="col-sm-2 col-form-label text-right">Bairro:</label>
+        <div class="col-sm-4">
+            <input type="text" id="Bairro" name="Bairro" value="" />
+        </div>
+    </div>
+    <div class="row col-md-offset-3">
+        <label for="valor" class="col-sm-2 col-form-label text-right">Cidade:</label>
+        <div class="col-sm-4">
+            <input type="text" id="Cidade" name="Cidade" value="" />
+        </div>
+    </div>\
+    <div class="row col-md-offset-3">
+        <label for="valor" class="col-sm-2 col-form-label text-right">Estado:</label>
+        <div class="col-sm-4">
+            <input type="text" id="Estado" name="Estado" value="" />
         </div>
     </div>
 
     <br />
     <div class="button row col-md-offset-1">
-        <button type="submit" class="btn btn-primary">Adicionar</button>
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
 
 
