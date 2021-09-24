@@ -1,10 +1,4 @@
-﻿<script src="~/lib/jquery/dist/cep.js"></script>
-<scripts src="~/Scripts/jquery-1.10.2.js"></scripts>
-
-
-
-
-
+﻿
 <form action="/Login/AddNewLogin" method="post">
 
     <h1 class="row col-md-offset">@ViewBag.Title</h1>
@@ -54,7 +48,7 @@
     <div class="row col-md-offset-3">
         <label for="valor" class="col-sm-2 col-form-label text-right">Endereço:</label>
         <div class="col-sm-4">
-            <input type="text" id="Endereco" name="endereco" value="" />
+            <input type="text" id="Endereco" name="Endereco" value="" />
         </div>
     </div>
     <div class="row col-md-offset-3">
@@ -80,9 +74,102 @@
     <div class="button row col-md-offset-1">
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
-
-
-
-
 </form>
+@using NotfisUpload.Models;
+@model Cep
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Web Services .NET Core</h1>
+    <p class="lead">Consultando CEP nos correios</p>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            <div class="form-group">
+                <div class="input-group">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(m => m.Codigo, new { @class = "form-control" })
+                    <span class="input-group-btn">
+                        <input type="submit" value="Buscar" class="btn btn-default" />
+                    </span>
+
+                </div>
+            </div>
+            <br />
+            <div>
+                @Html.ValidationMessageFor(m => m.Codigo, "", new { @class = "text-danger" })
+            </div>
+        }
+
+        @{
+            if (ViewBag.Endereco != null)
+            {
+                @ViewBag.Endereco.Descricao @ViewBag.Endereco.Complemento
+                <br />
+                @ViewBag.Endereco.Bairro<br />
+                @ViewBag.Endereco.Cidade<br />
+                @ViewBag.Endereco.UF<br />
+            }
+        }
+    </div>
+</div>
+
+
+
+
+
+
+
+@*<script src="~/lib/jquery/dist/jquery.js"></script>
+    <script>
+
+
+        function configurarConsultaCep() {
+            $("input").change(function () {
+                var cep_code = $(this).val();
+                if (cep_code.length <= 0) return;
+                $.get("http://apps.widenet.com.br/busca-cep/api/cep.json", { code: cep_code }, function (result) {
+                    if (result.status != 1) {
+                        alert(result.message || "Houve um erro desconhecido");
+                        return;
+                    }
+                    $("input[name='Cep']").val(result.code);
+                    $("input[name='Estado']").val(result.state);
+                    $("input[name='Cidade']").val(result.city);
+                    $("“input[name ='Bairro']").val(result.district);
+                    $("input [name='Endereco']").val(result.address);
+                });
+            });
+        });
+
+            //$(document).ready(function () {
+            //    configurarConsultaCep();
+            //});
+
+            //$(document).ready(function () {
+            //    alert("Test");
+            //});
+            //jQuery(function ($) {
+            //    $("input[name='Cep']").change(function () {
+            //        var cep_code = $(this).val();
+            //        if (cep_code.length <= 0) return;
+            //        $.get("http://apps.widenet.com.br/busca-cep/api/cep.json", { code: cep_code }, function (result) {
+            //            if (result.status != 1) {
+            //                alert(result.message || "Houve um erro desconhecido");
+            //                return;
+            //            }
+            //            $("input[name='Cep']").val(result.code);
+            //            $("input[name='Estado']").val(result.state);
+            //            $("input[name='Cidade']").val(result.city);
+            //            $("“input[name ='Bairro']").val(result.district);
+            //            $("input [name='Endereco']").val(result.address);
+            //        });
+            //    });
+            //});
+    </script>*@
 

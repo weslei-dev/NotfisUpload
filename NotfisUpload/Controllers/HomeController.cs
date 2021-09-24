@@ -18,10 +18,31 @@ namespace NotfisUpload.Controllers
             _logger = logger;
         }
 
-        public IActionResult CadastrarLogin()
-        {
-            return View();
-        }
+        //[HttpPost]
+        //public IActionResult CadastroLogin(Models.Cep cep)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(cep);
+        //    }
+        //
+        //    var correios = new Conta.AtendeClienteClient();
+        //
+        //    var consulta = correios.consultaCEPAsync(cep.Codigo.Replace("-", "")).Result;
+        //
+        //    if (consulta != null)
+        //    {
+        //        ViewBag.Endereco = new Entidade.Usuario()
+        //        {
+        //            Complemento = consulta.@return.complemento,
+        //            Bairro = consulta.@return.bairro,
+        //            Cidade = consulta.@return.cidade,
+        //            Estado = consulta.@return.uf
+        //        };
+        //    }
+        //
+        //    return View(cep);
+        //}
 
 
         public IActionResult Index()

@@ -27,22 +27,24 @@ namespace NotfisUpload.Controllers
         {
             _cadastrarLogin.AddNewLogin(usuario);
 
-                return View("~/Home/Index");
+            return View("~/Home/Index");
+        }
+
+
+        public IActionResult RegistraLogin()
+        {
+
+
+            return View();
         }
 
 
         public IActionResult CadastrarLogin()
         {
-            //ViewBag.cep = business.cep.Busca("13020320")
             return View();
         }
 
 
-        public IActionResult RegistrarLogin()
-        {
-            return View();
-
-        }
 
         public IActionResult RecuperarLogin()
         {
