@@ -1,4 +1,6 @@
-﻿<br />
+﻿@model IEnumerable<NotfisUpload.Entidade.Intercambio>
+
+
 <br />
 <div class="panel panel-default">
     <div class="panel-body">
@@ -28,15 +30,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>2</td>
-                        <td>[CGH] SARAIVA</td>
-                        <td>61365284017007</td>
-                        <td>Ativo</td>
-                        <td>17/08/2021</td>
-                        <td>Integração EDI</td>
-                        <td>Integração EDI</td>
-                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelitem => item.Id)</td>
+                            <td>@Html.DisplayFor(modelitem => item.CNPJ)</td>
+                            <td>@Html.DisplayFor(modelitem => item.Data)</td>
+                            <td>@Html.DisplayFor(modelitem => item.IE)</td>
+                            <td>@Html.DisplayFor(modelitem => item.NotasFiscais)</td>
+                            <td>@Html.DisplayFor(modelitem => item.Remetente)</td>
+                            <td>@Html.DisplayFor(modelitem => item.Destinatario)</td>
+
+                        </tr>
+                    }
                 </tbody>
             </table>
 

@@ -1,4 +1,66 @@
 ﻿
+
+@using NotfisUpload.Models;
+@model Cep
+
+<div class="row">
+    <div class="col-md-3">
+        @using (Html.BeginForm("CadastrarLogin", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            <div class="form-group">
+                <div class="input-group">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(m => m.Codigo, new { @class = "form-control" })
+                    <div class="row col-md-offset-3">
+                        <label for="cor" class="col-sm-2 col-form-label text-right">Cep:</label>
+                        <span class="input-group-btn">
+                            <input type="submit" value="Buscar" class="btn btn-default" />
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div>
+                @Html.ValidationMessageFor(m => m.Codigo, "", new { @class = "text-danger" })
+            </div>
+        }
+
+        @{
+            if (ViewBag.Endereco != null)
+            {
+
+                <div class="row col-md-offset-3">
+                    <label for="valor" class="col-sm-2 col-form-label text-right">Endereço:</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="Endereco" name="Endereco" />
+                    </div>
+                </div>
+                <div class="row col-md-offset-3">
+                    <label for="valor" class="col-sm-2 col-form-label text-right">Bairro:</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="Bairro" name="Bairro" value="@ViewBag.Endereco.Bairro" />
+                    </div>
+                </div>
+                <div class="row col-md-offset-3">
+                    <label for="valor" class="col-sm-2 col-form-label text-right">Cidade:</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="Cidade" name="Cidade" value=" @ViewBag.Endereco.Cidade" />
+                    </div>
+                </div>
+                <div class="row col-md-offset-3">
+                    <label for="valor" class="col-sm-2 col-form-label text-right">Estado:</label>
+                    <div class="col-sm-4">
+                        <input type="text" id="Estado" name="Estado" value="@ViewBag.Endereco.UF" />
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+
+
+
 <form action="/Login/AddNewLogin" method="post">
 
     <h1 class="row col-md-offset">@ViewBag.Title</h1>
@@ -27,12 +89,7 @@
             <input type="text" id="Telefone" name="Telefone" />
         </div>
     </div>
-    <div class="row col-md-offset-3">
-        <label for="cor" class="col-sm-2 col-form-label text-right">Cep:</label>
-        <div class="col-sm-4">
-            <input type="text" id="Cep" name="Cep" value="" />
-        </div>
-    </div>
+
     <div class="row col-md-offset-3">
         <label for="combustivel" class="col-sm-2 col-form-label text-right">Numero:</label>
         <div class="col-sm-4">
@@ -45,79 +102,133 @@
             <input type="text" id="Complemento" name="Complemento" />
         </div>
     </div>
-    <div class="row col-md-offset-3">
-        <label for="valor" class="col-sm-2 col-form-label text-right">Endereço:</label>
-        <div class="col-sm-4">
-            <input type="text" id="Endereco" name="Endereco" value="" />
-        </div>
-    </div>
-    <div class="row col-md-offset-3">
-        <label for="valor" class="col-sm-2 col-form-label text-right">Bairro:</label>
-        <div class="col-sm-4">
-            <input type="text" id="Bairro" name="Bairro" value="" />
-        </div>
-    </div>
-    <div class="row col-md-offset-3">
-        <label for="valor" class="col-sm-2 col-form-label text-right">Cidade:</label>
-        <div class="col-sm-4">
-            <input type="text" id="Cidade" name="Cidade" value="" />
-        </div>
-    </div>\
-    <div class="row col-md-offset-3">
-        <label for="valor" class="col-sm-2 col-form-label text-right">Estado:</label>
-        <div class="col-sm-4">
-            <input type="text" id="Estado" name="Estado" value="" />
-        </div>
-    </div>
-
-    <br />
     <div class="button row col-md-offset-1">
         <button type="submit" class="btn btn-primary">Cadastrar</button>
     </div>
 </form>
-@using NotfisUpload.Models;
-@model Cep
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*@model IEnumerable<_Views_Login_Login.Entidade.usario>
+
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Courses";
 }
 
-<div class="jumbotron">
-    <h1>Web Services .NET Core</h1>
-    <p class="lead">Consultando CEP nos correios</p>
-</div>
+<h2>Courses</h2>
 
-<div class="row">
-    <div class="col-md-3">
-        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Usuario => Usuario.)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Credits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
         {
-            <div class="form-group">
-                <div class="input-group">
-                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                    @Html.TextBoxFor(m => m.Codigo, new { @class = "form-control" })
-                    <span class="input-group-btn">
-                        <input type="submit" value="Buscar" class="btn btn-default" />
-                    </span>
-
-                </div>
-            </div>
-            <br />
-            <div>
-                @Html.ValidationMessageFor(m => m.Codigo, "", new { @class = "text-danger" })
-            </div>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CourseID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Credits)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department.Name)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CourseID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CourseID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CourseID">Delete</a>
+                </td>
+            </tr>
         }
+    </tbody>
+</table>*@
 
-        @{
-            if (ViewBag.Endereco != null)
-            {
-                @ViewBag.Endereco.Descricao @ViewBag.Endereco.Complemento
-                <br />
-                @ViewBag.Endereco.Bairro<br />
-                @ViewBag.Endereco.Cidade<br />
-                @ViewBag.Endereco.UF<br />
-            }
-        }
-    </div>
-</div>
 
 
 
