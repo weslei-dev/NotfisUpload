@@ -16,9 +16,6 @@ namespace NotfisUpload.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-
-
         private readonly DataBaseContext _context;
 
         public HomeController(DataBaseContext context)
@@ -26,11 +23,10 @@ namespace NotfisUpload.Controllers
             _context = context;
         }
 
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
 
         public IActionResult Index()
         {
@@ -44,9 +40,16 @@ namespace NotfisUpload.Controllers
 
         public async Task<IActionResult> Monitoramento()
         {
-            var chamada = await _context.Intercambio.ToListAsync();
+            var chamada = await _context.NotaFiscals.ToListAsync();
 
-            return View(    );
+            return View(chamada);
+        }
+
+        public async Task<IActionResult> GetName()
+        {
+            var GetName = await _context.NotaFiscals.ToListAsync();
+
+            return View(GetName);
         }
 
 

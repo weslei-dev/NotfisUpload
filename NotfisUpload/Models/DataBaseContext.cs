@@ -19,6 +19,11 @@ namespace NotfisUpload.Models
         public DbSet<Arquivo> Arquivos { get; set; }
         public DbSet<Intercambio> Intercambios { get; set; }
         public DbSet<Usuario> usuario { get; set; }
+        public DbSet<NotaFiscal> NotaFiscals { get; set; }
+
+
+
+
 
     }
 }
