@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 
 namespace NotfisUpload.Controllers
@@ -38,20 +39,14 @@ namespace NotfisUpload.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Monitoramento()
+        public async Task<IActionResult> Monitoramento(string Pedido, string ChaveNFE)
         {
-            var chamada = await _context.NotaFiscals.ToListAsync();
+            var notas = await _context.NotaFiscals
+                .Where(n => n.Pedido.Contains(Pedido ?? string.Empty) && n.ChaveNFE.Contains(ChaveNFE ?? string.Empty))
+                                                  .ToListAsync();
 
-            return View(chamada);
+            return View(notas);
         }
-
-        public async Task<IActionResult> GetName()
-        {
-            var GetName = await _context.NotaFiscals.ToListAsync();
-
-            return View(GetName);
-        }
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
