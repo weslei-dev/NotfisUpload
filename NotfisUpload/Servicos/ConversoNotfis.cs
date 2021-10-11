@@ -111,8 +111,6 @@ namespace UploadFile.Servicos
             notaFiscal.Seguro = linha.Substring(114, 1);
             notaFiscal.ChaveNFE = linha.Substring(238, 44);
             notaFiscal.Pedido = linha.Substring(282, 9);
-
-
         }
 
         private void LerDadosDestinatario(string linha, NotaFiscal notaFiscal)
@@ -169,6 +167,4 @@ namespace UploadFile.Servicos
         }
 
     }
-
-
 }

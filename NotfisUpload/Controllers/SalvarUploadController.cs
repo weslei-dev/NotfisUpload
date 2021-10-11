@@ -20,36 +20,47 @@ namespace NotfisUpload.Controllers
             _context = context;
         }
 
+
+
         public IActionResult Index(IFormFile files)
         {
             if (files == null || files.Length <= 0)
                 return View();
 
-            var fileName = Path.GetFileName(files.FileName);
-            var fileExtension = Path.GetExtension(fileName);
-            var newFileName = string.Concat(fileName, fileExtension);
-            var filesdto = new Arquivo()
-            {
-                Name = newFileName,
-                FileType = fileExtension,
-                Emissao = DateTime.Now
-            };
+            var arquivosExistente = _context.Arquivos
+                .FirstOrDefault(n => n.Name.Contains(files.FileName ?? string.Empty));
 
-
-            using (var target = new MemoryStream())
+            if (arquivosExistente != null)
             {
-                files.CopyTo(target);
-                filesdto.DataFiles = target.ToArray();
+                return View();
             }
+            else
+            {
 
-            var intercambio = new ConversorNotfis().Converter(files);
+                var fileName = Path.GetFileName(files.FileName);
+                var fileExtension = Path.GetExtension(fileName);
+                var newFileName = string.Concat(fileName, fileExtension);
+                var filesdto = new Arquivo()
+                {
+                    Name = newFileName,
+                    FileType = fileExtension,
+                    Emissao = DateTime.Now
+                };
 
-            _context.Arquivos.Add(filesdto);
-            _context.Intercambios.Add(intercambio);
+                using (var target = new MemoryStream())
+                {
+                    files.CopyTo(target);
+                    filesdto.DataFiles = target.ToArray();
+                }
 
-            _context.SaveChanges();
+                var intercambio = new ConversorNotfis().Converter(files);
 
-            return View("ShowFile", new Conteudo(Encoding.UTF8.GetString(filesdto.DataFiles)));
+                _context.Arquivos.Add(filesdto);
+                _context.Intercambios.Add(intercambio);
+                _context.SaveChanges();
+
+                return View("ShowFile", new Conteudo(Encoding.UTF8.GetString(filesdto.DataFiles)));
+            }
         }
     }
 }

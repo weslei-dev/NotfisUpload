@@ -13,7 +13,7 @@ namespace NotfisUpload.Models
     public class Arquivo
     {
         [Key]
-        public int intercambio { get; set; }
+        public int Intercambio { get; set; }
 
         [MaxLength(100)]
         public string Name { get; set; }
